@@ -11,6 +11,8 @@
 		67F8D9C92B4F091A006B07F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F8D9C82B4F091A006B07F8 /* ContentView.swift */; };
 		67F8D9CB2B4F091C006B07F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67F8D9CA2B4F091C006B07F8 /* Assets.xcassets */; };
 		67F8D9CF2B4F091C006B07F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67F8D9CE2B4F091C006B07F8 /* Preview Assets.xcassets */; };
+		67F8D9D72B4F0976006B07F8 /* OpenAIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 67F8D9D62B4F0976006B07F8 /* OpenAIKit */; };
+		67F8D9D92B4F09D0006B07F8 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F8D9D82B4F09D0006B07F8 /* ApiKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,7 @@
 		67F8D9CA2B4F091C006B07F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67F8D9CC2B4F091C006B07F8 /* AiImageGenerator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AiImageGenerator.entitlements; sourceTree = "<group>"; };
 		67F8D9CE2B4F091C006B07F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		67F8D9D82B4F09D0006B07F8 /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67F8D9D72B4F0976006B07F8 /* OpenAIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +58,7 @@
 			children = (
 				67F8D9C62B4F091A006B07F8 /* AiImageGeneratorApp.swift */,
 				67F8D9C82B4F091A006B07F8 /* ContentView.swift */,
+				67F8D9D82B4F09D0006B07F8 /* ApiKey.swift */,
 				67F8D9CA2B4F091C006B07F8 /* Assets.xcassets */,
 				67F8D9CC2B4F091C006B07F8 /* AiImageGenerator.entitlements */,
 				67F8D9CD2B4F091C006B07F8 /* Preview Content */,
@@ -85,6 +90,9 @@
 			dependencies = (
 			);
 			name = AiImageGenerator;
+			packageProductDependencies = (
+				67F8D9D62B4F0976006B07F8 /* OpenAIKit */,
+			);
 			productName = AiImageGenerator;
 			productReference = 67F8D9C32B4F091A006B07F8 /* AiImageGenerator.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +121,9 @@
 				Base,
 			);
 			mainGroup = 67F8D9BA2B4F0919006B07F8;
+			packageReferences = (
+				67F8D9D52B4F0976006B07F8 /* XCRemoteSwiftPackageReference "OpenAIKit" */,
+			);
 			productRefGroup = 67F8D9C42B4F091A006B07F8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67F8D9C92B4F091A006B07F8 /* ContentView.swift in Sources */,
+				67F8D9D92B4F09D0006B07F8 /* ApiKey.swift in Sources */,
 				67F8D9C72B4F091A006B07F8 /* AiImageGeneratorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +371,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		67F8D9D52B4F0976006B07F8 /* XCRemoteSwiftPackageReference "OpenAIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OpenDive/OpenAIKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		67F8D9D62B4F0976006B07F8 /* OpenAIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67F8D9D52B4F0976006B07F8 /* XCRemoteSwiftPackageReference "OpenAIKit" */;
+			productName = OpenAIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 67F8D9BB2B4F0919006B07F8 /* Project object */;
 }
